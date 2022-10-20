@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { PruebaServiceFirebaseComponent } from './shared/components/prueba-service-firebase.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PruebaServiceFirebaseComponent
   ],
   imports: [
     BrowserModule,
@@ -18,6 +20,9 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
     provideFirestore(() => getFirestore())
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [
+    PruebaServiceFirebaseComponent
+  ]
 })
 export class AppModule { }
