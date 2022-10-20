@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "employees-rinku"
+  },
+  "targets": {
+    "employees-rinku": {
+      "hosting": {
+        "coppel-challenge": [
+          "employees-rinku"
+        ]
+      }
+    }
   }
 }
